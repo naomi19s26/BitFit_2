@@ -1,6 +1,6 @@
 # Android Project 5 - BitFit App
 
-Submitted by: **Your Name Here**
+Submitted by: Naomi Enogieru
 
 BitFit is a health metrics app that allows users to track what food and how much calories you eat daily
 
@@ -31,7 +31,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![BitFit App](https://github.com/naomi19s26/BitFit/blob/master/fit_app.gif)
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
