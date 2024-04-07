@@ -1,5 +1,6 @@
 package com.example.bitfit
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -9,6 +10,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.bitfit.R
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
@@ -44,6 +46,7 @@ class HealthListFragment : Fragment() {
     }
 
     private fun fetchHealth() {
+        var totalSleep = 0
         // Access the database instance
         val database = (requireActivity().application as HealthApplication).db
 
@@ -69,6 +72,23 @@ class HealthListFragment : Fragment() {
 
                     // Notify the adapter that the data has changed
                     healthAdapter.notifyDataSetChanged()
+
+                    // Calculate total sleep from the fetched data
+                    var totalSleepFromDB = 0
+                    for (health in mappedList) {
+                        health.no_sleep?.toIntOrNull()?.let {
+                            totalSleepFromDB += it
+                        }
+                    }
+
+                    // Add the total sleep from the database to the current totalSleep
+                    //totalSleep += totalSleepFromDB
+                    //val intent = Intent(requireActivity(), Statistics::class.java)
+                    //intent.putExtra("TOTAL_SLEEP", totalSleep)
+                    //startActivity(intent)
+
+
+
                 }
             } catch (e: Exception) {
                 // Handle any errors that occur during data fetching
@@ -76,7 +96,10 @@ class HealthListFragment : Fragment() {
             }
         }
 
+
     }
+
+
 
     fun updateData(foodValue: String?, sleepValue: String?) {
         // Create a DisplayHealth object with the received data

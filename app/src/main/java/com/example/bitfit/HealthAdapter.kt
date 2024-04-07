@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.bitfit.R
 
 class HealthAdapter(healths1: Context, private val healths: MutableList<DisplayHealth>): RecyclerView.Adapter<HealthAdapter.ViewHolder>() {
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

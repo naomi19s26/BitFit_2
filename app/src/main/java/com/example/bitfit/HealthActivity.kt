@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.SeekBar
+import com.example.bitfit.R
 
 class HealthActivity : AppCompatActivity() {
 

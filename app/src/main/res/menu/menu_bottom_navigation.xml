@@ -9,7 +9,7 @@
         android:title="Log"
         />
     <item
-        android:id="@+id/action_schedules"
+        android:id="@+id/dashboard"
 
         android:icon="@drawable/baseline_dashboard_24"
         android:title="Dashboard"

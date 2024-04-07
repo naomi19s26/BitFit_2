@@ -11,6 +11,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bitfit.databinding.ActivityMainBinding
+import com.example.bitfit.R
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
@@ -31,8 +33,23 @@ class MainActivity : AppCompatActivity() {
         replaceFragment(HealthListFragment())
 
         val fragmentManager: FragmentManager = supportFragmentManager
-        //val LogFragment: Fragment = LogFragment()
-        val dashboardFragment: Fragment = HealthListFragment()
+        val statFragment: Fragment = StatisticsFragment()
+        val listFragment: Fragment = HealthListFragment()
+
+        val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
+        bottomNavigationView.setOnItemSelectedListener { item ->
+            lateinit var fragment: Fragment
+            when (item.itemId) {
+                R.id.log -> fragment = listFragment
+                R.id.dashboard -> fragment = statFragment
+
+
+            }
+            fragmentManager.beginTransaction().replace(R.id.health_frame_layout, fragment).commit()
+            true
+        }
+        //bottomNavigationView.selectedItemId = R.id.log
+
 
         val button: Button = findViewById(R.id.button)
         button.setOnClickListener {
