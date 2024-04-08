@@ -1,27 +1,23 @@
-# Android Project 5 - BitFit App
+# Android Project 6 - Bit_Fit Part 2
 
 Submitted by: Naomi Enogieru
 
-BitFit is a health metrics app that allows users to track what food and how much calories you eat daily
+Bit_Fit is a health metrics app that allows users to track your calorie intake
 
-Time spent: 9 hours spent in total
+Time spent: 11 hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [X] **At least one health metric is tracked (based on user input)**
-  - Chosen metric(s): Food/calorie count
-- [X] **There is a "create entry" UI that prompts users to make their daily entry**
-- [X] **New entries are saved in a database and then updated in the RecyclerView**
-- [X] **On application restart, previously entered entries are preserved (i.e., are *persistent*)**
- 
+- [X] **Use at least 2 Fragments**
+- [X] **Create a new dashboard fragment where users can see a summary of their entered data**
+- [X] **Use one of the Navigation UI Views (BottomNavigation, Drawer Layout, Top Bar) to move between the fragments**
+
 The following **optional** features are implemented:
 
-- [ ] **Create a UI for tracking averages and trends in metrics**
-- [ ] **Improve and customize the user interface through styling and coloring**
-- [ ] **Implement orientation responsivity**
-- [ ] **Add a daily photo feature**
+- [ ] **Add a more advanced UI (e.g: Graphing) for tracking trends in metrics**
+- [ ] **Implement daily notifications to prompt users to fill in their data**
 
 The following **additional** features are implemented:
 
@@ -31,7 +27,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![BitFit App](https://github.com/naomi19s26/BitFit/blob/master/fit_app.gif)
+![BitFit app](https://github.com/naomi19s26/BitFit_2/blob/master/bit_fit2.gif)
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ScreentoGif
